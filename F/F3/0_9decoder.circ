@@ -56,6 +56,54 @@
     <a name="circuit" val="decoder0to9"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1060,640)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="a"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1060,670)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="b"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1060,760)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="dot"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1060,810)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="c"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1060,860)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="d"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1060,920)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="e"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1070,1030)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="f"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1070,1100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="g"/>
+      <a name="type" val="output"/>
+    </comp>
     <comp lib="0" loc="(190,380)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="width" val="4"/>
@@ -86,6 +134,7 @@
       <a name="select" val="4"/>
     </comp>
     <comp lib="5" loc="(950,670)" name="7-Segment Display"/>
+    <wire from="(1060,660)" to="(1060,670)"/>
     <wire from="(190,380)" to="(440,380)"/>
     <wire from="(260,500)" to="(310,500)"/>
     <wire from="(310,470)" to="(310,500)"/>
@@ -293,19 +342,35 @@
     <wire from="(890,990)" to="(960,990)"/>
     <wire from="(900,680)" to="(900,740)"/>
     <wire from="(900,740)" to="(970,740)"/>
+    <wire from="(930,1100)" to="(1070,1100)"/>
+    <wire from="(930,1100)" to="(930,1220)"/>
     <wire from="(930,1220)" to="(930,1230)"/>
-    <wire from="(930,600)" to="(930,1220)"/>
+    <wire from="(930,600)" to="(930,1100)"/>
     <wire from="(930,600)" to="(950,600)"/>
+    <wire from="(940,1030)" to="(1070,1030)"/>
+    <wire from="(940,1030)" to="(940,1110)"/>
     <wire from="(940,1110)" to="(940,1140)"/>
     <wire from="(940,1110)" to="(950,1110)"/>
-    <wire from="(940,590)" to="(940,1110)"/>
+    <wire from="(940,590)" to="(940,1030)"/>
     <wire from="(940,590)" to="(960,590)"/>
     <wire from="(950,600)" to="(950,670)"/>
-    <wire from="(950,730)" to="(950,1000)"/>
+    <wire from="(950,730)" to="(950,920)"/>
+    <wire from="(950,920)" to="(1060,920)"/>
+    <wire from="(950,920)" to="(950,1000)"/>
     <wire from="(960,590)" to="(960,670)"/>
-    <wire from="(960,730)" to="(960,990)"/>
-    <wire from="(970,340)" to="(970,670)"/>
+    <wire from="(960,730)" to="(960,860)"/>
+    <wire from="(960,860)" to="(1060,860)"/>
+    <wire from="(960,860)" to="(960,990)"/>
+    <wire from="(970,340)" to="(970,640)"/>
+    <wire from="(970,640)" to="(1060,640)"/>
+    <wire from="(970,640)" to="(970,670)"/>
     <wire from="(970,730)" to="(970,740)"/>
-    <wire from="(980,470)" to="(980,670)"/>
+    <wire from="(970,740)" to="(970,810)"/>
+    <wire from="(970,810)" to="(1060,810)"/>
+    <wire from="(980,470)" to="(980,660)"/>
+    <wire from="(980,660)" to="(1060,660)"/>
+    <wire from="(980,660)" to="(980,670)"/>
+    <wire from="(980,730)" to="(980,760)"/>
+    <wire from="(980,760)" to="(1060,760)"/>
   </circuit>
 </project>

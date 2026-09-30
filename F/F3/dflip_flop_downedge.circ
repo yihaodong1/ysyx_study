@@ -18,7 +18,8 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="srlatch"/>
+  <lib desc="file#dlatch.circ" name="12"/>
+  <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -51,48 +52,58 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="srlatch">
+  <circuit name="main">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="srlatch"/>
+    <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(310,190)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="r"/>
-    </comp>
-    <comp lib="0" loc="(320,310)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="s"/>
-    </comp>
-    <comp lib="0" loc="(630,200)" name="Pin">
+    <comp lib="0" loc="(1210,320)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="q"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="0" loc="(650,310)" name="Pin">
+    <comp lib="0" loc="(1210,340)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="q_head"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="1" loc="(510,310)" name="NOR Gate"/>
-    <comp lib="1" loc="(540,200)" name="NOR Gate"/>
-    <wire from="(310,180)" to="(310,190)"/>
-    <wire from="(310,180)" to="(480,180)"/>
-    <wire from="(320,310)" to="(320,330)"/>
-    <wire from="(320,330)" to="(450,330)"/>
-    <wire from="(380,250)" to="(380,290)"/>
-    <wire from="(380,250)" to="(570,250)"/>
-    <wire from="(380,290)" to="(450,290)"/>
-    <wire from="(410,220)" to="(410,280)"/>
-    <wire from="(410,220)" to="(480,220)"/>
-    <wire from="(410,280)" to="(570,280)"/>
-    <wire from="(510,310)" to="(570,310)"/>
-    <wire from="(540,200)" to="(570,200)"/>
-    <wire from="(570,200)" to="(570,250)"/>
-    <wire from="(570,200)" to="(630,200)"/>
-    <wire from="(570,280)" to="(570,310)"/>
-    <wire from="(570,310)" to="(650,310)"/>
+    <comp lib="0" loc="(190,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="d"/>
+    </comp>
+    <comp lib="0" loc="(190,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="initial" val="0x1"/>
+      <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(220,330)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="clk"/>
+    </comp>
+    <comp lib="1" loc="(360,350)" name="NOT Gate"/>
+    <comp lib="12" loc="(1090,320)" name="dlatch"/>
+    <comp lib="12" loc="(650,310)" name="dlatch"/>
+    <comp lib="5" loc="(160,340)" name="Button"/>
+    <wire from="(1090,320)" to="(1210,320)"/>
+    <wire from="(1090,340)" to="(1210,340)"/>
+    <wire from="(160,340)" to="(160,350)"/>
+    <wire from="(190,300)" to="(430,300)"/>
+    <wire from="(190,410)" to="(430,410)"/>
+    <wire from="(220,330)" to="(220,350)"/>
+    <wire from="(220,330)" to="(430,330)"/>
+    <wire from="(220,350)" to="(330,350)"/>
+    <wire from="(360,350)" to="(380,350)"/>
+    <wire from="(380,350)" to="(380,470)"/>
+    <wire from="(380,470)" to="(810,470)"/>
+    <wire from="(430,300)" to="(430,310)"/>
+    <wire from="(430,350)" to="(430,410)"/>
+    <wire from="(430,410)" to="(870,410)"/>
+    <wire from="(650,310)" to="(870,310)"/>
+    <wire from="(810,340)" to="(810,470)"/>
+    <wire from="(810,340)" to="(870,340)"/>
+    <wire from="(870,310)" to="(870,320)"/>
+    <wire from="(870,360)" to="(870,410)"/>
   </circuit>
 </project>

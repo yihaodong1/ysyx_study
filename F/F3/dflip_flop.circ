@@ -19,7 +19,7 @@
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
   <lib desc="file#dlatch.circ" name="12"/>
-  <main name="main"/>
+  <main name="dflip_flop"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -52,9 +52,9 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="dflip_flop">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="dflip_flop"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1210,320)" name="Pin">
@@ -75,20 +75,24 @@
     </comp>
     <comp lib="0" loc="(190,410)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="initial" val="0x1"/>
       <a name="label" val="reset"/>
+    </comp>
+    <comp lib="0" loc="(220,330)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="clk"/>
     </comp>
     <comp lib="1" loc="(360,350)" name="NOT Gate"/>
     <comp lib="12" loc="(1090,320)" name="dlatch"/>
     <comp lib="12" loc="(650,310)" name="dlatch"/>
-    <comp lib="5" loc="(160,340)" name="Button">
-      <a name="label" val="clk"/>
-    </comp>
+    <comp lib="5" loc="(160,340)" name="Button"/>
     <wire from="(1090,320)" to="(1210,320)"/>
     <wire from="(1090,340)" to="(1210,340)"/>
     <wire from="(160,340)" to="(160,350)"/>
-    <wire from="(160,350)" to="(260,350)"/>
     <wire from="(190,300)" to="(430,300)"/>
     <wire from="(190,410)" to="(430,410)"/>
+    <wire from="(220,330)" to="(220,350)"/>
+    <wire from="(220,350)" to="(260,350)"/>
     <wire from="(260,350)" to="(260,470)"/>
     <wire from="(260,350)" to="(330,350)"/>
     <wire from="(260,470)" to="(810,470)"/>
@@ -102,5 +106,25 @@
     <wire from="(810,340)" to="(870,340)"/>
     <wire from="(870,310)" to="(870,320)"/>
     <wire from="(870,360)" to="(870,410)"/>
+  </circuit>
+  <circuit name="reverse">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="reverse"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(310,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(310,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="1" loc="(640,260)" name="NOT Gate"/>
+    <comp loc="(570,260)" name="dflip_flop"/>
+    <wire from="(310,280)" to="(350,280)"/>
+    <wire from="(310,300)" to="(350,300)"/>
+    <wire from="(350,210)" to="(350,260)"/>
+    <wire from="(350,210)" to="(640,210)"/>
+    <wire from="(570,260)" to="(610,260)"/>
+    <wire from="(640,210)" to="(640,260)"/>
   </circuit>
 </project>

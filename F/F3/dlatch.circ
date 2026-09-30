@@ -63,7 +63,6 @@
     </comp>
     <comp lib="0" loc="(110,490)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="initial" val="0x1"/>
       <a name="label" val="reset"/>
     </comp>
     <comp lib="0" loc="(1100,440)" name="Pin">

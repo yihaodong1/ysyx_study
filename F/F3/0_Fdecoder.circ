@@ -56,6 +56,54 @@
     <a name="circuit" val="decoder0toF"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1080,1020)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="g"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1080,470)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="a"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1080,550)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="b"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1080,630)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="dot"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1080,700)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="c"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1080,790)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="d"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1080,870)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="e"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1080,950)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="f"/>
+      <a name="type" val="output"/>
+    </comp>
     <comp lib="0" loc="(190,380)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="width" val="4"/>
@@ -86,6 +134,14 @@
       <a name="select" val="4"/>
     </comp>
     <comp lib="5" loc="(950,670)" name="7-Segment Display"/>
+    <wire from="(1010,1020)" to="(1080,1020)"/>
+    <wire from="(1010,630)" to="(1010,1020)"/>
+    <wire from="(1020,650)" to="(1020,950)"/>
+    <wire from="(1020,950)" to="(1080,950)"/>
+    <wire from="(1050,630)" to="(1050,730)"/>
+    <wire from="(1050,630)" to="(1080,630)"/>
+    <wire from="(1080,440)" to="(1080,470)"/>
+    <wire from="(1080,700)" to="(1080,740)"/>
     <wire from="(190,380)" to="(440,380)"/>
     <wire from="(260,500)" to="(310,500)"/>
     <wire from="(310,470)" to="(310,500)"/>
@@ -300,12 +356,26 @@
     <wire from="(940,1110)" to="(950,1110)"/>
     <wire from="(940,590)" to="(940,1110)"/>
     <wire from="(940,590)" to="(960,590)"/>
-    <wire from="(950,600)" to="(950,670)"/>
-    <wire from="(950,730)" to="(950,1000)"/>
-    <wire from="(960,590)" to="(960,670)"/>
-    <wire from="(960,730)" to="(960,990)"/>
-    <wire from="(970,340)" to="(970,670)"/>
+    <wire from="(950,600)" to="(950,630)"/>
+    <wire from="(950,630)" to="(1010,630)"/>
+    <wire from="(950,630)" to="(950,670)"/>
+    <wire from="(950,730)" to="(950,870)"/>
+    <wire from="(950,870)" to="(1080,870)"/>
+    <wire from="(950,870)" to="(950,1000)"/>
+    <wire from="(960,590)" to="(960,650)"/>
+    <wire from="(960,650)" to="(1020,650)"/>
+    <wire from="(960,650)" to="(960,670)"/>
+    <wire from="(960,730)" to="(960,790)"/>
+    <wire from="(960,790)" to="(1080,790)"/>
+    <wire from="(960,790)" to="(960,990)"/>
+    <wire from="(970,340)" to="(970,440)"/>
+    <wire from="(970,440)" to="(1080,440)"/>
+    <wire from="(970,440)" to="(970,670)"/>
     <wire from="(970,730)" to="(970,740)"/>
-    <wire from="(980,470)" to="(980,670)"/>
+    <wire from="(970,740)" to="(1080,740)"/>
+    <wire from="(980,470)" to="(980,550)"/>
+    <wire from="(980,550)" to="(1080,550)"/>
+    <wire from="(980,550)" to="(980,670)"/>
+    <wire from="(980,730)" to="(1050,730)"/>
   </circuit>
 </project>

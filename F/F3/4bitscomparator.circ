@@ -18,7 +18,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="main"/>
+  <main name="comparator4bit"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -51,15 +51,34 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="comparator4bit">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="comparator4bit"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1040,530)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="equal"/>
       <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(360,440)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="a"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(360,440)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(410,640)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="b"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(410,640)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
     </comp>
     <comp lib="1" loc="(700,420)" name="XOR Gate"/>
     <comp lib="1" loc="(710,510)" name="XOR Gate"/>
@@ -73,14 +92,6 @@
       <a name="inputs" val="4"/>
     </comp>
     <comp lib="5" loc="(1050,630)" name="LED"/>
-    <comp lib="5" loc="(380,390)" name="DipSwitch">
-      <a name="facing" val="east"/>
-      <a name="number" val="4"/>
-    </comp>
-    <comp lib="5" loc="(430,590)" name="DipSwitch">
-      <a name="facing" val="east"/>
-      <a name="number" val="4"/>
-    </comp>
     <wire from="(1040,530)" to="(1040,630)"/>
     <wire from="(1040,630)" to="(1050,630)"/>
     <wire from="(380,400)" to="(640,400)"/>
