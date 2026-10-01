@@ -85,17 +85,19 @@
       <a name="label" val="q_head"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="1" loc="(320,320)" name="AND Gate"/>
+    <comp lib="1" loc="(290,350)" name="NOT Gate"/>
+    <comp lib="1" loc="(360,320)" name="OR Gate"/>
     <comp lib="12" loc="(670,290)" name="dflip_flop"/>
     <wire from="(230,280)" to="(450,280)"/>
     <wire from="(230,320)" to="(250,320)"/>
-    <wire from="(230,350)" to="(270,350)"/>
+    <wire from="(230,350)" to="(260,350)"/>
     <wire from="(230,390)" to="(450,390)"/>
     <wire from="(250,300)" to="(250,320)"/>
-    <wire from="(250,300)" to="(270,300)"/>
-    <wire from="(270,340)" to="(270,350)"/>
-    <wire from="(320,310)" to="(320,320)"/>
-    <wire from="(320,310)" to="(450,310)"/>
+    <wire from="(250,300)" to="(310,300)"/>
+    <wire from="(290,350)" to="(310,350)"/>
+    <wire from="(310,340)" to="(310,350)"/>
+    <wire from="(360,310)" to="(360,320)"/>
+    <wire from="(360,310)" to="(450,310)"/>
     <wire from="(450,280)" to="(450,290)"/>
     <wire from="(450,330)" to="(450,390)"/>
     <wire from="(670,290)" to="(720,290)"/>
