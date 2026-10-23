@@ -19,10 +19,10 @@
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
   <lib desc="file#8bitreg.circ" name="12"/>
-  <lib desc="file#4bitadder.circ" name="13"/>
+  <lib desc="file#reg.circ" name="13"/>
   <lib desc="file#8bitadder.circ" name="14"/>
   <lib desc="file#4bitscomparator.circ" name="15"/>
-  <lib desc="file#reg.circ" name="16"/>
+  <lib desc="file#4bitadder.circ" name="16"/>
   <lib desc="file#8bitdflipflop_en.circ" name="17"/>
   <lib desc="file#4_16decoder.circ" name="18"/>
   <main name="main"/>
@@ -283,11 +283,14 @@
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="1" loc="(1420,480)" name="AND Gate"/>
+    <comp lib="1" loc="(1420,480)" name="AND Gate">
+      <a name="negate0" val="true"/>
+    </comp>
     <comp lib="1" loc="(1490,600)" name="OR Gate">
       <a name="inputs" val="3"/>
     </comp>
     <comp lib="1" loc="(1540,620)" name="AND Gate"/>
+    <comp lib="1" loc="(1650,960)" name="AND Gate"/>
     <comp lib="1" loc="(2550,680)" name="NOT Gate"/>
     <comp lib="1" loc="(2610,700)" name="AND Gate"/>
     <comp lib="12" loc="(2460,910)" name="reg8bit"/>
@@ -320,12 +323,15 @@
     <wire from="(1050,350)" to="(1770,350)"/>
     <wire from="(1050,360)" to="(1770,360)"/>
     <wire from="(1050,370)" to="(1440,370)"/>
-    <wire from="(1050,380)" to="(1350,380)"/>
+    <wire from="(1050,380)" to="(1060,380)"/>
     <wire from="(1050,390)" to="(1460,390)"/>
     <wire from="(1050,400)" to="(1470,400)"/>
     <wire from="(1050,410)" to="(1130,410)"/>
     <wire from="(1050,420)" to="(1120,420)"/>
     <wire from="(1060,120)" to="(1540,120)"/>
+    <wire from="(1060,380)" to="(1060,980)"/>
+    <wire from="(1060,380)" to="(1350,380)"/>
+    <wire from="(1060,980)" to="(1600,980)"/>
     <wire from="(1100,510)" to="(1100,790)"/>
     <wire from="(1100,510)" to="(1130,510)"/>
     <wire from="(1100,790)" to="(1710,790)"/>
@@ -340,7 +346,7 @@
     <wire from="(1180,540)" to="(1600,540)"/>
     <wire from="(1350,380)" to="(1350,460)"/>
     <wire from="(1350,380)" to="(1450,380)"/>
-    <wire from="(1350,460)" to="(1370,460)"/>
+    <wire from="(1350,460)" to="(1360,460)"/>
     <wire from="(1350,560)" to="(1440,560)"/>
     <wire from="(1350,580)" to="(1360,580)"/>
     <wire from="(1350,600)" to="(1410,600)"/>
@@ -356,7 +362,7 @@
     <wire from="(1420,580)" to="(1420,890)"/>
     <wire from="(1420,890)" to="(1420,930)"/>
     <wire from="(1420,890)" to="(1710,890)"/>
-    <wire from="(1420,930)" to="(2240,930)"/>
+    <wire from="(1420,930)" to="(1600,930)"/>
     <wire from="(1430,480)" to="(1430,600)"/>
     <wire from="(1430,600)" to="(1440,600)"/>
     <wire from="(1440,280)" to="(1440,370)"/>
@@ -398,6 +404,7 @@
     <wire from="(1600,410)" to="(1600,460)"/>
     <wire from="(1600,410)" to="(2550,410)"/>
     <wire from="(1600,750)" to="(1610,750)"/>
+    <wire from="(1600,930)" to="(1600,940)"/>
     <wire from="(1610,620)" to="(1610,750)"/>
     <wire from="(1610,620)" to="(1950,620)"/>
     <wire from="(1620,640)" to="(1620,780)"/>
@@ -411,6 +418,7 @@
     <wire from="(1650,320)" to="(1650,330)"/>
     <wire from="(1650,320)" to="(1690,320)"/>
     <wire from="(1650,330)" to="(1790,330)"/>
+    <wire from="(1650,960)" to="(2100,960)"/>
     <wire from="(1680,130)" to="(1690,130)"/>
     <wire from="(1680,140)" to="(1690,140)"/>
     <wire from="(1680,150)" to="(1690,150)"/>
@@ -477,6 +485,8 @@
     <wire from="(20,340)" to="(270,340)"/>
     <wire from="(2050,200)" to="(2100,200)"/>
     <wire from="(2100,200)" to="(2100,400)"/>
+    <wire from="(2100,930)" to="(2100,960)"/>
+    <wire from="(2100,930)" to="(2240,930)"/>
     <wire from="(2170,560)" to="(2260,560)"/>
     <wire from="(2170,580)" to="(2230,580)"/>
     <wire from="(2220,950)" to="(2240,950)"/>
@@ -663,9 +673,7 @@
     </comp>
     <comp lib="0" loc="(2010,1390)" name="Constant"/>
     <comp lib="0" loc="(2010,1500)" name="Constant"/>
-    <comp lib="0" loc="(2010,1590)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
+    <comp lib="0" loc="(2010,1590)" name="Constant"/>
     <comp lib="0" loc="(2010,1810)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
@@ -675,7 +683,9 @@
     <comp lib="0" loc="(2010,680)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
-    <comp lib="0" loc="(2010,830)" name="Constant"/>
+    <comp lib="0" loc="(2010,830)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
     <comp lib="0" loc="(2010,980)" name="Constant">
       <a name="value" val="0x0"/>
     </comp>
@@ -1066,15 +1076,12 @@
     <wire from="(1820,1370)" to="(1900,1370)"/>
     <wire from="(1820,1480)" to="(1910,1480)"/>
     <wire from="(1820,1570)" to="(1830,1570)"/>
-    <wire from="(1820,1600)" to="(1820,1790)"/>
-    <wire from="(1820,1600)" to="(1830,1600)"/>
-    <wire from="(1820,1790)" to="(1820,2050)"/>
     <wire from="(1820,1790)" to="(1920,1790)"/>
     <wire from="(1820,530)" to="(1840,530)"/>
     <wire from="(1820,660)" to="(1930,660)"/>
     <wire from="(1820,810)" to="(1940,810)"/>
     <wire from="(1820,960)" to="(1850,960)"/>
-    <wire from="(1830,1570)" to="(1830,1600)"/>
+    <wire from="(1830,1570)" to="(1830,2050)"/>
     <wire from="(1850,960)" to="(1850,2050)"/>
     <wire from="(1860,1070)" to="(1860,2050)"/>
     <wire from="(1870,1170)" to="(1870,2050)"/>
