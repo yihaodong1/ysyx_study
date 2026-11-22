@@ -65,17 +65,9 @@
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
     </comp>
-    <comp lib="0" loc="(230,410)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-    </comp>
     <comp lib="0" loc="(230,600)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="width" val="3"/>
-    </comp>
-    <comp lib="0" loc="(230,600)" name="Splitter">
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
     </comp>
     <comp lib="0" loc="(230,600)" name="Splitter">
       <a name="fanout" val="3"/>
@@ -98,14 +90,11 @@
       <a name="fanout" val="3"/>
       <a name="incoming" val="3"/>
     </comp>
-    <comp lib="0" loc="(360,1240)" name="Pin">
+    <comp lib="0" loc="(250,1240)" name="Pin">
       <a name="appearance" val="NewPins"/>
-      <a name="facing" val="north"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="0" loc="(360,1240)" name="Splitter">
-      <a name="facing" val="north"/>
-    </comp>
+    <comp lib="0" loc="(300,1240)" name="Splitter"/>
     <comp lib="0" loc="(630,800)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
@@ -151,6 +140,7 @@
     <comp lib="12" loc="(350,980)" name="decoder_2to4">
       <a name="facing" val="north"/>
     </comp>
+    <wire from="(250,1240)" to="(300,1240)"/>
     <wire from="(250,260)" to="(250,380)"/>
     <wire from="(250,260)" to="(460,260)"/>
     <wire from="(250,390)" to="(260,390)"/>
@@ -179,13 +169,13 @@
     <wire from="(280,120)" to="(470,120)"/>
     <wire from="(290,190)" to="(290,230)"/>
     <wire from="(290,190)" to="(470,190)"/>
-    <wire from="(340,1210)" to="(340,1220)"/>
-    <wire from="(340,1210)" to="(370,1210)"/>
+    <wire from="(320,1220)" to="(350,1220)"/>
+    <wire from="(320,1230)" to="(370,1230)"/>
     <wire from="(350,1200)" to="(350,1220)"/>
     <wire from="(350,980)" to="(360,980)"/>
     <wire from="(360,230)" to="(360,980)"/>
     <wire from="(360,230)" to="(450,230)"/>
-    <wire from="(370,1200)" to="(370,1210)"/>
+    <wire from="(370,1200)" to="(370,1230)"/>
     <wire from="(370,360)" to="(370,980)"/>
     <wire from="(370,360)" to="(440,360)"/>
     <wire from="(390,540)" to="(390,980)"/>
